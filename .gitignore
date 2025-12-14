@@ -44,3 +44,4 @@ env/
 # Testing
 coverage/
 .nyc_output/
+.claude/agents/github-cli-expert.md
