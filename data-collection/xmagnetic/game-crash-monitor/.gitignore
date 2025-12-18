@@ -1,0 +1,16 @@
+# Large data files - regenerate with: npm run scrape
+data/full_games.jsonl
+
+# Node modules
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

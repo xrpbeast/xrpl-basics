@@ -1,201 +1,163 @@
-# XRPL Development Guide
+# XRPL Basics
 
-Comprehensive resources for building on XRP Ledger (XRPL). Includes tutorials, API references, and AI assistant integration.
+Practical tools, examples, and AI assistant integration for XRP Ledger (XRPL) development and data analysis.
+
+## Repository Structure
+
+```
+xrpl-basics/
+├── .claude/
+│   ├── skills/xrpl-dev-guide/    # AI assistant skill for XRPL development
+│   └── agents/                    # Custom agents
+├── data-collection/
+│   ├── xmagnetic/                 # xMagnetic crash game analytics
+│   │   └── game-crash-monitor/    # Real-time monitor + statistical analyzer
+│   └── first-ledger/              # Ledger data collection tools
+├── examples/
+│   └── javascript/                # XRPL code examples
+└── README.md
+```
 
 ---
 
-## For AI Assistants
+## 🎰 xMagnetic Crash Game Monitor
+
+**Location**: `data-collection/xmagnetic/game-crash-monitor/`
+
+Real-time WebSocket monitor and comprehensive statistical analyzer for xMagnetic crash game.
+
+### Features
+- **Scraper**: Downloads all 300k+ historical games with bet data
+- **Analyzer**: Advanced statistical analysis with pattern detection and predictions
+- **Monitor**: Real-time WebSocket feed tracking
+
+### Quick Start
+```bash
+cd data-collection/xmagnetic/game-crash-monitor
+npm install
+
+# Download historical data
+npm run scrape
+
+# Run comprehensive analysis with predictions
+python analyze_games.py data/full_games.jsonl
+```
+
+### Analysis Capabilities
+- **Statistical Tests**: Runs test, autocorrelation, chi-square
+- **Pattern Detection**: Identifies common 3-game sequences
+- **Volatility Analysis**: Rolling window variance tracking
+- **Conditional Probabilities**: Transition matrix analysis
+- **Predictions**: 9 forecasting methods with consensus model
+  - Moving averages (SMA, EMA, WMA)
+  - Pattern-based matching
+  - Trend-adjusted predictions
+  - Historical median/mode
+
+See `data-collection/xmagnetic/game-crash-monitor/ANALYSIS_GUIDE.md` for detailed documentation.
+
+---
+
+## 🤖 For AI Assistants
 
 **Skill Available**: `.claude/skills/xrpl-dev-guide/SKILL.md`
 
-This repo includes a comprehensive skill for AI assistants helping developers build XRPL applications. The skill provides:
+Comprehensive skill for AI assistants building XRPL applications:
 - Standard transaction patterns (connect → autofill → sign → submit)
 - Type-safe TypeScript examples
-- Security best practices
+- Security best practices (testnet defaults, `.env` for secrets)
 - Error handling patterns
 - 111+ curated resource links
-- Dynamic sitemap integration (https://xrpl.org/sitemap.xml)
+- Dynamic sitemap integration
 
 **Key Principles**:
 - Always use official docs (https://js.xrpl.org/ for JS/TS)
 - Never guess API methods - fetch docs when uncertain
-- Default to testnet, type-safe code, `.env` for secrets
 - Cite sources with specific URLs
 
-## Getting Started
+---
+
+## 🚀 Getting Started with XRPL
 
 ### Quick Setup (JavaScript/TypeScript)
 ```bash
 # Install XRPL library
 npm install xrpl
 
-# Create .env file
+# Create .env file for secrets
 echo "WALLET_SEED=your_seed_here" > .env
+```
 
-# Basic example
+```typescript
 import { Client, Wallet } from 'xrpl'
 
+// Connect to testnet
 const client = new Client('wss://s.altnet.rippletest.net:51233')
 await client.connect()
+
+// Load wallet from seed
 const wallet = Wallet.fromSeed(process.env.WALLET_SEED!)
-// ... your code
+
+// ... your transaction code here
+
 await client.disconnect()
 ```
 
-### Get Test XRP
-- [Testnet Faucet](https://xrpl.org/xrp-testnet-faucet.html) - Free testnet XRP
+### Essential Resources
+- **[Testnet Faucet](https://xrpl.org/xrp-testnet-faucet.html)** - Get free testnet XRP
+- **[XRPL.js Docs](https://js.xrpl.org/)** - Official TypeScript/JavaScript library
+- **[XRPL.org](https://xrpl.org/docs)** - Complete documentation
+- **[WebSocket Tool](https://xrpl.org/websocket-api-tool.html)** - Test API requests
 
-### Learn XRPL Basics
-- [What is XRP Ledger?](https://xrpl.org/docs/introduction/what-is-the-xrp-ledger)
-- [What is XRP?](https://xrpl.org/docs/introduction/what-is-xrp)
-- [Crypto Wallets](https://xrpl.org/docs/introduction/crypto-wallets)
-- [Software Ecosystem](https://xrpl.org/docs/introduction/software-ecosystem)
-- [Transactions & Requests](https://xrpl.org/docs/introduction/transactions-and-requests)
+---
 
-## Core Concepts
+## 📚 XRPL Key Topics
 
-### Accounts & Keys
-- [Accounts Overview](https://xrpl.org/docs/concepts/accounts)
-- [Addresses](https://xrpl.org/docs/concepts/accounts/addresses)
-- [Cryptographic Keys](https://xrpl.org/docs/concepts/accounts/cryptographic-keys)
-- [Multi-Signing](https://xrpl.org/docs/concepts/accounts/multi-signing)
-- [Reserves](https://xrpl.org/docs/concepts/accounts/reserves)
-- [Tickets](https://xrpl.org/docs/concepts/accounts/tickets)
+### Core Concepts
+- **[Accounts](https://xrpl.org/docs/concepts/accounts)** - Addresses, keys, reserves, multi-signing
+- **[Transactions](https://xrpl.org/docs/concepts/transactions)** - Fees, reliable submission, secure signing
+- **[Ledgers](https://xrpl.org/docs/concepts/ledgers)** - Structure and consensus protocol
+- **[Consensus](https://xrpl.org/docs/concepts/consensus-protocol)** - How XRPL reaches agreement
 
-### Transactions & Ledgers
-- [Transactions](https://xrpl.org/docs/concepts/transactions)
-- [Transaction Fees](https://xrpl.org/docs/concepts/transactions/fees)
-- [Reliable Transaction Submission](https://xrpl.org/docs/concepts/transactions/reliable-transaction-submission)
-- [Secure Signing](https://xrpl.org/docs/concepts/transactions/secure-signing)
-- [Ledgers](https://xrpl.org/docs/concepts/ledgers)
-- [Ledger Structure](https://xrpl.org/docs/concepts/ledgers/ledger-structure)
+### Payment Types
+- **[XRP Payments](https://xrpl.org/docs/concepts/payment-types/direct-xrp-payments)** - Send XRP between accounts
+- **[Cross-Currency](https://xrpl.org/docs/concepts/payment-types/cross-currency-payments)** - Multi-hop payments
+- **[Escrow](https://xrpl.org/docs/concepts/payment-types/escrow)** - Time or condition-based releases
+- **[Payment Channels](https://xrpl.org/docs/concepts/payment-types/payment-channels)** - High-throughput micropayments
+- **[Checks](https://xrpl.org/docs/concepts/payment-types/checks)** - Deferred payments
 
-### Network & Consensus
-- [Consensus Protocol](https://xrpl.org/docs/concepts/consensus-protocol)
-- [Networks & Servers](https://xrpl.org/docs/concepts/networks-and-servers)
+### Tokens & Assets
+- **[Fungible Tokens](https://xrpl.org/docs/concepts/tokens/fungible-tokens)** - Trust lines, freezes, transfer fees
+- **[NFTs](https://xrpl.org/docs/concepts/tokens/nfts)** - Mint, transfer, collections
+- **[DEX](https://xrpl.org/docs/concepts/tokens/decentralized-exchange)** - Built-in decentralized exchange
+- **[AMM](https://xrpl.org/docs/concepts/tokens/decentralized-exchange/automated-market-makers)** - Automated market makers
 
-## Payment Types
-- [Direct XRP Payments](https://xrpl.org/docs/concepts/payment-types/direct-xrp-payments)
-- [Cross-Currency Payments](https://xrpl.org/docs/concepts/payment-types/cross-currency-payments)
-- [Escrow](https://xrpl.org/docs/concepts/payment-types/escrow)
-- [Payment Channels](https://xrpl.org/docs/concepts/payment-types/payment-channels)
-- [Checks](https://xrpl.org/docs/concepts/payment-types/checks)
+### Tutorials by Language
+- **[JavaScript/TypeScript](https://xrpl.org/docs/tutorials/javascript)** - Payments, NFTs, AMM, apps
+- **[Python](https://xrpl.org/docs/tutorials/python)** - Build apps, payments, NFTs
+- **[HTTP/WebSocket APIs](https://xrpl.org/docs/tutorials/http-websocket-apis)** - Direct API access
 
-## Tokens & Digital Assets
+### API References
+- **[HTTP/WebSocket APIs](https://xrpl.org/docs/references/http-websocket-apis)** - Public & admin methods
+- **[XRPL.js Docs](https://js.xrpl.org/)** - TypeScript/JavaScript library
+- **[Protocol Reference](https://xrpl.org/docs/references/protocol)** - Transaction types, data structures
+- **[Data API](https://xrpl.org/docs/references/data-api)** - Historical data queries
 
-### Fungible Tokens
-- [Fungible Tokens Overview](https://xrpl.org/docs/concepts/tokens/fungible-tokens)
-- [Trust Lines](https://xrpl.org/docs/concepts/tokens/fungible-tokens/trust-line-tokens)
-- [Freezes](https://xrpl.org/docs/concepts/tokens/fungible-tokens/freezes)
-- [Transfer Fees](https://xrpl.org/docs/concepts/tokens/fungible-tokens/transfer-fees)
-- [Rippling](https://xrpl.org/docs/concepts/tokens/fungible-tokens/rippling)
+---
 
-### NFTs
-- [NFTs Overview](https://xrpl.org/docs/concepts/tokens/nfts)
-- [Dynamic NFTs](https://xrpl.org/docs/concepts/tokens/nfts/dynamic-nfts)
-- [NFT Collections](https://xrpl.org/docs/concepts/tokens/nfts/collections)
+## 🛠️ Tools & Explorers
+- **[XRP Ledger Explorer](https://livenet.xrpl.org/)** - Mainnet blockchain explorer
+- **[Testnet Explorer](https://testnet.xrpl.org/)** - Testnet blockchain explorer
+- **[WebSocket Tool](https://xrpl.org/websocket-api-tool.html)** - Interactive API testing
 
-### Decentralized Exchange (DEX)
-- [DEX Overview](https://xrpl.org/docs/concepts/tokens/decentralized-exchange)
-- [Offers](https://xrpl.org/docs/concepts/tokens/decentralized-exchange/offers)
-- [Automated Market Makers (AMM)](https://xrpl.org/docs/concepts/tokens/decentralized-exchange/automated-market-makers)
-- [Auto-Bridging](https://xrpl.org/docs/concepts/tokens/decentralized-exchange/autobridging)
+---
 
-## Tutorials
+## 🤝 Contributing
+Contributions welcome! See [XRPL Contributing Guide](https://xrpl.org/contributing) for guidelines.
 
-### JavaScript/TypeScript
-- [JavaScript Tutorials](https://xrpl.org/docs/tutorials/javascript)
-- [Create Accounts & Send XRP](https://xrpl.org/docs/tutorials/javascript/send-payments/create-accounts-send-xrp)
-- [Create Trust Lines & Send Currency](https://xrpl.org/docs/tutorials/javascript/send-payments/create-trust-line-send-currency)
-- [Create Offers](https://xrpl.org/docs/tutorials/javascript/send-payments/create-offers)
-- [Mint & Burn NFTs](https://xrpl.org/docs/tutorials/javascript/nfts/mint-and-burn-nfts)
-- [Transfer NFTs](https://xrpl.org/docs/tutorials/javascript/nfts/transfer-nfts)
-- [AMM Tutorials](https://xrpl.org/docs/tutorials/javascript/amm)
-- [Build Apps](https://xrpl.org/docs/tutorials/javascript/build-apps)
-- [Compliance](https://xrpl.org/docs/tutorials/javascript/compliance)
+---
 
-### Python
-- [Python Tutorials](https://xrpl.org/docs/tutorials/python)
-- [Build Apps (Python)](https://xrpl.org/docs/tutorials/python/build-apps)
-- [Send Payments (Python)](https://xrpl.org/docs/tutorials/python/send-payments)
-- [NFTs (Python)](https://xrpl.org/docs/tutorials/python/nfts)
-
-### Java
-- [Java Tutorials](https://xrpl.org/docs/tutorials/java)
-- [Build Apps (Java)](https://xrpl.org/docs/tutorials/java/build-apps)
-
-### Go
-- [Go Tutorials](https://xrpl.org/docs/tutorials/go)
-- [Build Apps (Go)](https://xrpl.org/docs/tutorials/go/build-apps)
-
-### HTTP/WebSocket APIs
-- [API Tutorials](https://xrpl.org/docs/tutorials/http-websocket-apis)
-- [Build Apps via APIs](https://xrpl.org/docs/tutorials/http-websocket-apis/build-apps)
-
-## How-To Guides
-- [Send XRP](https://xrpl.org/docs/tutorials/how-tos/send-xrp)
-- [Manage Account Settings](https://xrpl.org/docs/tutorials/how-tos/manage-account-settings)
-- [Use Tokens](https://xrpl.org/docs/tutorials/how-tos/use-tokens)
-- [Use Batch Transactions](https://xrpl.org/docs/tutorials/how-tos/use-batch-transactions)
-- [Use XRPL Sidechains](https://xrpl.org/docs/tutorials/how-tos/use-xrpl-sidechains)
-
-## API References
-
-### HTTP/WebSocket APIs
-- [API Overview](https://xrpl.org/docs/references/http-websocket-apis)
-- [Public API Methods](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods)
-- [Admin API Methods](https://xrpl.org/docs/references/http-websocket-apis/admin-api-methods)
-- [Account Methods](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/account-methods)
-- [Ledger Methods](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/ledger-methods)
-- [Transaction Methods](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/transaction-methods)
-- [Server Info Methods](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/server-info-methods)
-- [Path & Order Book Methods](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/path-and-order-book-methods)
-
-### Client Libraries & Data APIs
-- [Client Libraries](https://xrpl.org/docs/references/client-libraries)
-- [XRPL.js (JavaScript/TypeScript)](https://js.xrpl.org/)
-- [XRP API](https://xrpl.org/docs/references/xrp-api)
-- [Data API](https://xrpl.org/docs/references/data-api)
-
-### Protocol & Data Formats
-- [Protocol Reference](https://xrpl.org/docs/references/protocol)
-- [Transaction Types](https://xrpl.org/docs/references/protocol/transactions)
-- [Ledger Data Structures](https://xrpl.org/docs/references/protocol/ledger-data)
-- [Data Types](https://xrpl.org/docs/references/protocol/data-types)
-- [Binary Format](https://xrpl.org/docs/references/protocol/binary-format)
-
-## Use Cases
-- [Payments](https://xrpl.org/docs/use-cases/payments)
-- [DeFi](https://xrpl.org/docs/use-cases/defi)
-- [Tokenization](https://xrpl.org/docs/use-cases/tokenization)
-- [NFT Marketplace Overview](https://xrpl.org/docs/use-cases/tokenization/nft-mkt-overview)
-
-## Infrastructure & Operations
-- [Installation](https://xrpl.org/docs/infrastructure/installation)
-- [System Requirements](https://xrpl.org/docs/infrastructure/installation/system-requirements)
-- [Configuration](https://xrpl.org/docs/infrastructure/configuration)
-- [Server Modes](https://xrpl.org/docs/infrastructure/configuration/server-modes)
-- [Peering](https://xrpl.org/docs/infrastructure/configuration/peering)
-- [Testing & Auditing](https://xrpl.org/docs/infrastructure/testing-and-auditing)
-- [Troubleshooting](https://xrpl.org/docs/infrastructure/troubleshooting)
-
-## Tools & Explorers
-- [XRP Ledger Explorer](https://livenet.xrpl.org/) - Mainnet explorer
-- [XRPL Testnet Faucet](https://xrpl.org/xrp-testnet-faucet.html) - Get test XRP
-- [WebSocket Tool](https://xrpl.org/websocket-api-tool.html) - Test API requests
-
-## Community & Contribution
-- [Contributing Guide](https://xrpl.org/contributing)
-- [Code of Conduct](https://xrpl.org/code-of-conduct)
-- [Contribute Code](https://xrpl.org/resources/contribute-code)
-- [Contribute Documentation](https://xrpl.org/resources/contribute-documentation)
-- [Contribute Blog Posts](https://xrpl.org/resources/contribute-blog)
-- [Report a Scam](https://xrpl.org/community/report-a-scam)
-
-## News & Updates
-- [XRPL Blog](https://xrpl.org/blog) - Release notes, amendments, security updates
-
-## Localized Resources
-- [Spanish Documentation](https://xrpl.org/es-es/docs/introduction)
-- [Japanese Documentation](https://xrpl.org/ja/docs/introduction)
+## 📰 Stay Updated
+- **[XRPL Blog](https://xrpl.org/blog)** - Release notes, amendments, security updates
+- **[XRPL Foundation](https://foundation.xrpl.org/)** - Ecosystem news
 
