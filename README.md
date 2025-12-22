@@ -12,10 +12,11 @@ xrpl-basics/
 ├── data-collection/
 │   ├── xmagnetic/                 # xMagnetic crash game analytics
 │   │   └── game-crash-monitor/    # Real-time monitor + statistical analyzer
+│   ├── xrplmeta/                  # XRPL Meta API documentation & examples
+│   │   └── XRPLMETA_DOCUMENTATION.md
 │   └── first-ledger/              # Ledger data collection tools
 ├── examples/
 │   └── javascript/                # XRPL code examples
-├── XRPLMETA_DOCUMENTATION.md      # XRPL Meta API reference with real responses
 └── README.md
 ```
 
@@ -61,7 +62,7 @@ See `data-collection/xmagnetic/game-crash-monitor/ANALYSIS_GUIDE.md` for detaile
 
 ## 📊 XRPL Meta API Documentation
 
-**Location**: `XRPLMETA_DOCUMENTATION.md`
+**Location**: `data-collection/xrplmeta/XRPLMETA_DOCUMENTATION.md`
 
 Comprehensive documentation for XRPL Meta API with real-world examples and actual API responses.
 
@@ -96,7 +97,7 @@ console.log(`24h Volume: ${token.metrics.volume_24h} XRP`);
 - SOLO token: 218K holders, $31.3M market cap
 - Server info with full ledger ranges
 
-See `XRPLMETA_DOCUMENTATION.md` for complete API reference with real responses.
+See `data-collection/xrplmeta/XRPLMETA_DOCUMENTATION.md` for complete API reference with real responses.
 
 ---
 
