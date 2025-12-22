@@ -15,6 +15,7 @@ xrpl-basics/
 │   └── first-ledger/              # Ledger data collection tools
 ├── examples/
 │   └── javascript/                # XRPL code examples
+├── XRPLMETA_DOCUMENTATION.md      # XRPL Meta API reference with real responses
 └── README.md
 ```
 
@@ -55,6 +56,47 @@ python analyze_games.py data/full_games.jsonl
   - Historical median/mode
 
 See `data-collection/xmagnetic/game-crash-monitor/ANALYSIS_GUIDE.md` for detailed documentation.
+
+---
+
+## 📊 XRPL Meta API Documentation
+
+**Location**: `XRPLMETA_DOCUMENTATION.md`
+
+Comprehensive documentation for XRPL Meta API with real-world examples and actual API responses.
+
+### Features
+- **REST API**: Token data, server info, ledger queries
+- **WebSocket API**: Real-time token subscriptions
+- **Real Examples**: Actual $BUBBLES token responses included
+- **Type-Safe**: Full TypeScript interfaces
+- **Multi-Language**: JavaScript, TypeScript, Python, React examples
+
+### Quick Example
+```javascript
+// Fetch token data
+const identifier = '24425542424C4553000000000000000000000000:rGUKfQ2Sm35KFSZ6BuKsjHxgyKSYgV7pzs';
+const response = await fetch(`https://s1.xrplmeta.org/token/${identifier}`);
+const token = await response.json();
+
+console.log(`Price: $${token.metrics.price}`);
+console.log(`Holders: ${token.metrics.holders}`);
+console.log(`24h Volume: ${token.metrics.volume_24h} XRP`);
+```
+
+### API Endpoints
+- `GET /server` - Server status and ledger ranges
+- `GET /tokens` - List all 185K+ tokens with metrics
+- `GET /token/{currency}:{issuer}` - Detailed token data
+- `GET /token/{currency}:{issuer}/series/{metric}` - Time series data
+- `wss://s1.xrplmeta.org` - WebSocket subscriptions
+
+### Real Data Included
+- $BUBBLES token: 296 holders, $0.000274 price, 58.9M supply
+- SOLO token: 218K holders, $31.3M market cap
+- Server info with full ledger ranges
+
+See `XRPLMETA_DOCUMENTATION.md` for complete API reference with real responses.
 
 ---
 
@@ -148,6 +190,7 @@ await client.disconnect()
 ## 🛠️ Tools & Explorers
 - **[XRP Ledger Explorer](https://livenet.xrpl.org/)** - Mainnet blockchain explorer
 - **[Testnet Explorer](https://testnet.xrpl.org/)** - Testnet blockchain explorer
+- **[XRPL Meta](https://xrplmeta.org/)** - Token metadata & analytics API (185K+ tokens)
 - **[WebSocket Tool](https://xrpl.org/websocket-api-tool.html)** - Interactive API testing
 
 ---
