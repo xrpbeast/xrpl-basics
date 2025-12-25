@@ -10,6 +10,9 @@ Core concepts and examples for XRP Ledger development.
 3. [History](./03-history-of-xrpl.md) - Origins, timeline, and evolution
 4. [Features Overview](./04-features-overview.md) - Payments, DEX, NFTs, escrow, and more
 5. [Core Concepts](./05-core-concepts.md) - Infrastructure, consensus, accounts, transactions
+6. [Accounts Deep Dive](./06-accounts-deep-dive.md) - Keys, signing, addresses, creating accounts
+7. [Account Generation](./07-account-generation.md) - Wallet.generate(), seeds, testnet faucet
+8. [Payment Basics](./08-payment-basics.md) - Sending XRP, autofill, transaction results
 
 ## Topics Covered
 
