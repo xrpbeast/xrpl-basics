@@ -34,6 +34,9 @@ Core concepts and examples for XRP Ledger development.
 27. [Xaman Webhook Authentication](./27-xaman-webhook-authentication.md) - Secure sessions, JWT, webhook flow
 28. [Xaman OAuth2 PKCE](./28-xaman-oauth2-pkce.md) - Standards-based auth, token exchange, JWKS verification
 29. [Webhook Signature Verification](./29-webhook-signature-verification.md) - HMAC verification, security
+30. [Xaman as OpenID Provider](./30-xaman-openid-provider.md) - Enterprise SSO, OIDC integration
+31. [Payload Signing](./31-payload-signing.md) - Payments, trust lines, NFTs, on-chain verification
+32. [Payload Delivery Options](./32-payload-delivery-options.md) - Deep links, push notifications, return URLs
 
 ## Topics Covered
 
