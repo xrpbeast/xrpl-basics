@@ -19,6 +19,7 @@ Core concepts and examples for XRP Ledger development.
 12. [Installing rippled](./12-installing-rippled.md) - Ubuntu setup, verification, firewall
 13. [Configuring rippled](./13-configuring-rippled.md) - Nginx proxy, SSL, WebSocket access
 14. [Running a Validator](./14-running-a-validator.md) - Keys, tokens, domain verification
+15. [Maintaining rippled](./15-maintaining-rippled.md) - Updates, backups, amendment blocking
 
 ## Topics Covered
 
