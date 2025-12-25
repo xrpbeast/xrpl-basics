@@ -33,6 +33,7 @@ Core concepts and examples for XRP Ledger development.
 26. [Xaman Custom Sign-In](./26-xaman-custom-sign-in.md) - Backend, WebSocket, custom UI
 27. [Xaman Webhook Authentication](./27-xaman-webhook-authentication.md) - Secure sessions, JWT, webhook flow
 28. [Xaman OAuth2 PKCE](./28-xaman-oauth2-pkce.md) - Standards-based auth, token exchange, JWKS verification
+29. [Webhook Signature Verification](./29-webhook-signature-verification.md) - HMAC verification, security
 
 ## Topics Covered
 
