@@ -13,6 +13,8 @@ Core concepts and examples for XRP Ledger development.
 6. [Accounts Deep Dive](./06-accounts-deep-dive.md) - Keys, signing, addresses, creating accounts
 7. [Account Generation](./07-account-generation.md) - Wallet.generate(), seeds, testnet faucet
 8. [Payment Basics](./08-payment-basics.md) - Sending XRP, autofill, transaction results
+9. [Infrastructure Intro](./09-infrastructure-intro.md) - Running rippled, why run your own node
+10. [What is rippled?](./10-what-is-rippled.md) - Node types, UNL, history management
 
 ## Topics Covered
 
