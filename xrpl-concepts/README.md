@@ -30,6 +30,9 @@ Core concepts and examples for XRP Ledger development.
 23. [Introduction to Xaman](./23-introduction-to-xaman.md) - Wallet, signing app, developer platform
 24. [Xaman Developer Console](./24-xaman-developer-console.md) - API keys, app setup, configuration
 25. [Xaman Sign-In with SDK](./25-xaman-sign-in-sdk.md) - React integration, PKCE flow, state persistence
+26. [Xaman Custom Sign-In](./26-xaman-custom-sign-in.md) - Backend, WebSocket, custom UI
+27. [Xaman Webhook Authentication](./27-xaman-webhook-authentication.md) - Secure sessions, JWT, webhook flow
+28. [Xaman OAuth2 PKCE](./28-xaman-oauth2-pkce.md) - Standards-based auth, token exchange, JWKS verification
 
 ## Topics Covered
 
