@@ -28,6 +28,8 @@ Core concepts and examples for XRP Ledger development.
 21. [Self-Signed Operations](./21-self-signed-operations.md) - Backend processes, automation, batch transactions
 22. [Querying the Ledger](./22-querying-the-ledger.md) - Direct API, SDK, Clio, custom database
 23. [Introduction to Xaman](./23-introduction-to-xaman.md) - Wallet, signing app, developer platform
+24. [Xaman Developer Console](./24-xaman-developer-console.md) - API keys, app setup, configuration
+25. [Xaman Sign-In with SDK](./25-xaman-sign-in-sdk.md) - React integration, PKCE flow, state persistence
 
 ## Topics Covered
 
