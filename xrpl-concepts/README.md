@@ -23,6 +23,11 @@ Core concepts and examples for XRP Ledger development.
 16. [Building Applications Intro](./16-building-applications-intro.md) - Stage 2, Xaman integration
 17. [Transaction Flow & Querying](./17-transaction-flow-and-querying.md) - Generate, sign, submit, verify
 18. [Integration Types](./18-integration-types.md) - Wallet, self-signed, querying, push vs pull
+19. [Wallet Types](./19-wallet-types.md) - Hot vs cold, hardware, software, paper wallets
+20. [Supporting Multiple Wallets](./20-supporting-multiple-wallets.md) - Strategy, abstraction layers, challenges
+21. [Self-Signed Operations](./21-self-signed-operations.md) - Backend processes, automation, batch transactions
+22. [Querying the Ledger](./22-querying-the-ledger.md) - Direct API, SDK, Clio, custom database
+23. [Introduction to Xaman](./23-introduction-to-xaman.md) - Wallet, signing app, developer platform
 
 ## Topics Covered
 
