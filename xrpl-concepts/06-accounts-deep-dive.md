@@ -173,7 +173,7 @@ Once you have the address, you can send funds to it from some other activated ac
 
 We will discuss reserves in more detail later, but for now, the key takeaways are:
 
-- For an account to be activated and remain usable, it must receive and maintain a balance greater than the current reserve (at the time of writing, this is **10 XRP**)
+- For an account to be activated and remain usable, it must receive and maintain a balance greater than the current reserve (**2 XRP** base reserve, plus **0.2 XRP** per owned object like trust lines)
 - Reserves play a vital role in protecting the XRP Ledger against spam or malicious usage
 - The reserve XRP cannot be spent, but you can recover part of it by deleting the account (a topic we'll cover in a future lecture)
 

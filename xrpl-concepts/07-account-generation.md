@@ -16,7 +16,7 @@ This is a strictly mathematical process and can be performed **completely offlin
 
 Send XRP to the newly created account's r-address using a payment transaction. When the XRP Ledger processes the payment, it attempts to assign the payment to the destination account. But in the case of a new account, it doesn't exist yet - so the XRP Ledger creates a new account object on the ledger and assigns the payment to its balance.
 
-For the account to become active, it must receive and maintain a balance greater than the account base reserve (currently 10 XRP).
+For the account to become active, it must receive and maintain a balance greater than the account base reserve (currently **2 XRP**).
 
 ---
 

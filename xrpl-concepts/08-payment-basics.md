@@ -192,7 +192,7 @@ Amount: xrpToDrops("1"),  // Only 1 XRP
 
 **Result**: The transaction fails with `tecNO_DST_INSUF_XRP`
 
-Why? Because the base reserve is 10 XRP. An account can only be activated if it receives at least 10 XRP. Sending 1 XRP isn't enough to create the account.
+Why? Because the base reserve is 2 XRP. An account can only be activated if it receives at least 2 XRP. Sending 1 XRP isn't enough to create the account.
 
 What happens:
 - The sending account's balance stays the same (minus the fee)
@@ -200,7 +200,7 @@ What happens:
 - The transaction is recorded as failed
 - You can see the failed transaction in the explorer
 
-**Fix**: Send at least 10 XRP (we used 20 to have some spending power):
+**Fix**: Send at least 2 XRP (we used 20 to have some spending power):
 
 ```javascript
 Amount: xrpToDrops("20"),  // 20 XRP - enough to activate!
@@ -237,7 +237,7 @@ You can check accounts at:
 5. **Use `submitAndWait()`** - Waits for validation
 6. **Always check the result** - Success response ≠ successful transaction
 7. **Know the result codes** - `tesSUCCESS` is what you want
-8. **Remember the reserve** - New accounts need at least 10 XRP to activate
+8. **Remember the reserve** - New accounts need at least 2 XRP to activate
 
 ---
 

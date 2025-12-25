@@ -15,6 +15,10 @@ Core concepts and examples for XRP Ledger development.
 8. [Payment Basics](./08-payment-basics.md) - Sending XRP, autofill, transaction results
 9. [Infrastructure Intro](./09-infrastructure-intro.md) - Running rippled, why run your own node
 10. [What is rippled?](./10-what-is-rippled.md) - Node types, UNL, history management
+11. [Node Prerequisites](./11-node-prerequisites.md) - Hardware, ports, domain setup
+12. [Installing rippled](./12-installing-rippled.md) - Ubuntu setup, verification, firewall
+13. [Configuring rippled](./13-configuring-rippled.md) - Nginx proxy, SSL, WebSocket access
+14. [Running a Validator](./14-running-a-validator.md) - Keys, tokens, domain verification
 
 ## Topics Covered
 
