@@ -37,6 +37,7 @@ Core concepts and examples for XRP Ledger development.
 30. [Xaman as OpenID Provider](./30-xaman-openid-provider.md) - Enterprise SSO, OIDC integration
 31. [Payload Signing](./31-payload-signing.md) - Payments, trust lines, NFTs, on-chain verification
 32. [Payload Delivery Options](./32-payload-delivery-options.md) - Deep links, push notifications, return URLs
+33. [Xaman Production Best Practices](./33-xaman-production-best-practices.md) - Rate limits, storage, dev mode, checklist
 
 ## Topics Covered
 
