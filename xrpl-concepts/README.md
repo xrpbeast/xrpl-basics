@@ -20,6 +20,9 @@ Core concepts and examples for XRP Ledger development.
 13. [Configuring rippled](./13-configuring-rippled.md) - Nginx proxy, SSL, WebSocket access
 14. [Running a Validator](./14-running-a-validator.md) - Keys, tokens, domain verification
 15. [Maintaining rippled](./15-maintaining-rippled.md) - Updates, backups, amendment blocking
+16. [Building Applications Intro](./16-building-applications-intro.md) - Stage 2, Xaman integration
+17. [Transaction Flow & Querying](./17-transaction-flow-and-querying.md) - Generate, sign, submit, verify
+18. [Integration Types](./18-integration-types.md) - Wallet, self-signed, querying, push vs pull
 
 ## Topics Covered
 
