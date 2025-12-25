@@ -7,7 +7,8 @@ Core concepts and examples for XRP Ledger development.
 0. [Prerequisites](./00-prerequisites.md) - Install Node.js, npm, VS Code
 1. [What is the XRP Ledger?](./01-what-is-xrpl.md) - Core properties and strengths
 2. [Hello World](./02-hello-world.md) - Connect and fetch ledger info
-3. [History](./03-history.md) - Origins, timeline, and evolution
+3. [History](./03-history-of-xrpl.md) - Origins, timeline, and evolution
+4. [Features Overview](./04-features-overview.md) - Payments, DEX, NFTs, escrow, and more
 
 ## Topics Covered
 
