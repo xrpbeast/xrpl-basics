@@ -28,16 +28,15 @@ Native on-ledger exchange for trading XRP and issued assets.
 
 ## Payment Channels
 
-Capable of working offline, and does not broadcast each payment to the public ledger. Off-chain mechanism for high-frequency transactions. 
+Off-chain mechanism for high-frequency transactions.
+- Reduced fees
 - Ideal for: micropayments, gaming, subscriptions
-- Speeds up micropayments, and reduces transaction fees
 
 ## Escrow
 
 Lock XRP until conditions are met or time elapses.
 - Condition-based or time-based release
 - Currently XRP-only (amendment proposed for issued assets)
-- There's an amendment that will allow using other assets in an escrow.
 
 ## NFTs
 
@@ -45,15 +44,15 @@ Non-fungible tokens for unique digital ownership.
 - Added via amendment (Oct 2022)
 - Minting, trading, burning on-ledger
 
-## Checks
+## Cheques
 
 Deferred payment promises.
 - Sender creates cheque with amount and expiry
 - Recipient must cash before expiration
 
-## Tickets (Snipers love this)
+## Tickets
 
-Reserve transaction sequence numbers for future use. 
+Reserve transaction sequence numbers for future use.
 - Ensures processing during congestion
 - Enables out-of-order transaction submission
 

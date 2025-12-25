@@ -9,6 +9,7 @@ Core concepts and examples for XRP Ledger development.
 2. [Hello World](./02-hello-world.md) - Connect and fetch ledger info
 3. [History](./03-history-of-xrpl.md) - Origins, timeline, and evolution
 4. [Features Overview](./04-features-overview.md) - Payments, DEX, NFTs, escrow, and more
+5. [Core Concepts](./05-core-concepts.md) - Infrastructure, consensus, accounts, transactions
 
 ## Topics Covered
 
