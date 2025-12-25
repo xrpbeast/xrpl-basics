@@ -26,3 +26,4 @@ Core concepts and examples for XRP Ledger development.
 - [XRPL Documentation](https://xrpl.org/docs)
 - [xrpl.js Library](https://js.xrpl.org/)
 - [XRPL Testnet Faucet](https://xrpl.org/xrp-testnet-faucet.html)
+- [Community Events](https://xrpl.org/community/events)
